@@ -7,3 +7,15 @@
 body {
   background: #ffffff;
 }
+
+.stage {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product {
+  width: min(420px, 80vw);
+  height: auto;
+}
