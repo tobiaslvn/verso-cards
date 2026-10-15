@@ -17,5 +17,7 @@ body {
 
 .product {
   width: min(420px, 80vw);
+  max-height: 90vh;
   height: auto;
+  object-fit: contain;
 }
