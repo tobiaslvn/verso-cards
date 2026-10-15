@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
+  <rect width="480" height="480" fill="#f0ece3"/>
+  <g transform="rotate(-8 240 240)">
+    <rect x="150" y="110" width="180" height="260" rx="12" fill="#2f4f3e"/>
+  </g>
+  <g transform="rotate(4 240 240)">
+    <rect x="160" y="105" width="180" height="260" rx="12" fill="#ffffff" stroke="#d8d2c4" stroke-width="2"/>
+    <text x="250" y="250" text-anchor="middle" font-family="Georgia, serif" font-size="28" letter-spacing="6" fill="#2f4f3e">VERSO</text>
+  </g>
+  <text x="240" y="450" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#9b958a">Replace product.svg with your product photo</text>
+</svg>
