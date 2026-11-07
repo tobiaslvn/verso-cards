@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verso Cards</title>
   <meta name="description" content="Verso Cards" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=39" />
   <link rel="icon" href="FAVI.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -17,9 +14,218 @@
     <span class="logo">VERSO</span>
   </header>
 
-  <main class="stage">
-    <img class="product" src="flower-motif.jpeg" alt="Verso card with hand-painted flower motif" />
+  <main class="page">
+    <section class="index">
+      <p class="intro">
+        Verso Cards is a series of hand-painted playing card editions by Tobias Levin.
+        Each deck is a set of 52 US-made playing cards with hand-painted backs and ace
+        of spades, painted in Copenhagen, Denmark, and released in time-limited editions.
+      </p>
+
+      <figure class="figure-mobile">
+        <img class="product" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
+      </figure>
+
+      <dl class="block spec">
+        <dt>Title</dt><dd>Flower Motif</dd>
+        <dt>Artist</dt><dd>Tobias Levin</dd>
+        <dt>Price</dt><dd>$185</dd>
+        <dt>Availability</dt><dd>Time-limited edition, 48 hours</dd>
+        <dt>Shipping</dt><dd>Ships in December 2026, complimentary delivery from California</dd>
+      </dl>
+
+      <!-- Before release -->
+      <div class="block release-panel" id="release-upcoming" hidden>
+        <p>48 hour release starts on</p>
+        <p>Tuesday, 10 November 2026, 16:00 CET</p>
+      </div>
+
+      <!-- During release -->
+      <div class="block" id="release-live" hidden>
+        <p>Available for a limited time</p>
+        <p>Ends in <span id="countdown"></span></p>
+        <p class="spaced">
+          <a class="buy-button" href="https://buy.stripe.com/00w3cu3WybXrfbCebf8Ra06">Buy $185</a>
+        </p>
+        <p class="buy-note">Ships in December 2026, complimentary delivery from California</p>
+      </div>
+
+      <!-- After release -->
+      <div class="block" id="release-ended" hidden>
+        <p>This release has ended</p>
+        <p>The 48 hour window closed on Thursday, 12 November 2026 at 16:00 CET</p>
+      </div>
+
+      <div class="block">
+        <p>Be notified when editions go live</p>
+        <form class="notify-form" id="notify-form">
+          <input class="notify-input" id="notify-email" type="email" required
+                 placeholder="Email address" autocomplete="email" />
+          <button class="text-button" type="submit">Notify me</button>
+        </form>
+        <p id="notify-status" hidden></p>
+      </div>
+
+      <div class="block sections">
+        <details class="section" name="sections">
+          <summary>About this work</summary>
+          <div class="section-body">
+            <p>
+              The same flower motif is painted by hand 52 times in a row, a
+              meditation on repetition.
+            </p>
+            <p>
+              There are no two flowers that are the
+              same, yet they are exactly the same. The balance between chaos and
+              order expresses itself through everything in this way.
+            </p>
+            <p>
+              A handmade object carries the limitations of the person who made it,
+              and in that it shares something grounded in what is real. A direct
+              statement against the imitation of reality we are seeing today.
+            </p>
+          </div>
+        </details>
+        <details class="section" name="sections">
+          <summary>Edition details</summary>
+          <p class="section-body">
+            Set of 52, hand-painted backs and ace of spades in a Japanese oil-based
+            solvent dye ink. US-made playing cards printed on FSC-certified paper from
+            sustainably managed forests, with vegetable-based inks and starch-based
+            laminate. Painted in Copenhagen, Denmark. Each deck is numbered and signed.
+            The edition size will be updated once the 48 hour window has closed.
+          </p>
+        </details>
+        <details class="section" name="sections">
+          <summary>Packaging</summary>
+          <div class="section-body">
+            <p>Packaging is handmade in Copenhagen by <a class="text-link" href="https://www.elvo.com" target="_blank" rel="noopener">Elvo</a>.</p>
+            <img class="section-image" src="small_elvo.png"
+                 alt="Handmade cardboard box by Elvo Packaging, open with a wrapped deck inside" />
+          </div>
+        </details>
+        <details class="section" name="sections">
+          <summary>Payment, Policies and Shipping</summary>
+          <div class="section-body">
+            <p>
+              Payment is processed securely by Stripe, accepting all major credit
+              and debit cards, Apple Pay and Google Pay. All orders ship free of
+              charge from California. Decks will ship in December 2026.
+            </p>
+            <p>
+              Cancellation or change requests must be made within 24 hours of
+              placing your order, by email to
+              <a class="text-link" href="mailto:info@anyoneworldwide.com">info@anyoneworldwide.com</a>.
+              We are unable to accommodate requests made after this window, as the
+              deck will already have entered production or been dispatched.
+            </p>
+            <p>
+              Once your deck has arrived, you have 14 days to let us know if you
+              would like a return. Decks must be returned in perfect condition and
+              in their original packaging; we will coordinate the return with you
+              directly, and your refund will be issued to the original payment
+              method within 14 days of the deck reaching us.
+            </p>
+            <p>
+              If your deck arrives damaged, faulty, or materially not as described,
+              please contact us as soon as possible, within 48 hours of
+              receipt for damage visible on delivery, or within 14 days of
+              discovering any other issue. Where appropriate, we will arrange a
+              replacement or refund in accordance with applicable law.
+            </p>
+          </div>
+        </details>
+      </div>
+
+    </section>
+
+    <figure class="figure">
+      <img class="product" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
+    </figure>
   </main>
+
+  <footer class="site-footer">
+    <p>Payments secured by Stripe</p>
+    <p>Verso Cards is owned and operated by Anyone Worldwide ApS, Copenhagen</p>
+    <p>&copy; 2026 All rights reserved</p>
+  </footer>
+
+  <script>
+    // --- Time-limited release: 48h window, Tue 10 Nov 2026 16:00 CET -> Thu 12 Nov 2026 16:00 CET ---
+    const RELEASE_START = new Date("2026-11-10T16:00:00+01:00");
+    const RELEASE_END = new Date(RELEASE_START.getTime() + 48 * 60 * 60 * 1000);
+
+    // Klaviyo config — fill in once the list exists
+    const KLAVIYO_COMPANY_ID = ""; // public API key / site ID
+    const KLAVIYO_LIST_ID = "";    // newsletter list ID
+
+    const upcoming = document.getElementById("release-upcoming");
+    const live = document.getElementById("release-live");
+    const ended = document.getElementById("release-ended");
+    const countdown = document.getElementById("countdown");
+
+    // Preview a state locally with ?preview=live or ?preview=ended
+    const previewState = new URLSearchParams(location.search).get("preview");
+    let clockOffset = 0;
+    if (previewState === "live") clockOffset = RELEASE_START.getTime() - Date.now() + 1000;
+    if (previewState === "ended") clockOffset = RELEASE_END.getTime() - Date.now() + 1000;
+
+    function renderRelease() {
+      const now = Date.now() + clockOffset;
+      upcoming.hidden = !(now < RELEASE_START);
+      live.hidden = !(now >= RELEASE_START && now < RELEASE_END);
+      ended.hidden = !(now >= RELEASE_END);
+      if (!live.hidden) {
+        const left = RELEASE_END - now;
+        const h = Math.floor(left / 3600000);
+        const m = Math.floor((left % 3600000) / 60000);
+        const s = Math.floor((left % 60000) / 1000);
+        countdown.textContent =
+          `${h}h ${String(m).padStart(2, "0")}m ${String(s).padStart(2, "0")}s`;
+      }
+    }
+    renderRelease();
+    setInterval(renderRelease, 1000);
+
+    const notifyForm = document.getElementById("notify-form");
+    const notifyStatus = document.getElementById("notify-status");
+    notifyForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("notify-email").value.trim();
+      notifyStatus.hidden = false;
+      if (!KLAVIYO_COMPANY_ID || !KLAVIYO_LIST_ID) {
+        notifyStatus.textContent = "Sign-up is not live yet. Please check back soon.";
+        return;
+      }
+      notifyStatus.textContent = "Signing you up…";
+      try {
+        const res = await fetch(
+          `https://a.klaviyo.com/client/subscriptions/?company_id=${KLAVIYO_COMPANY_ID}`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json", revision: "2024-10-15" },
+            body: JSON.stringify({
+              data: {
+                type: "subscription",
+                attributes: {
+                  profile: { data: { type: "profile", attributes: { email } } },
+                },
+                relationships: {
+                  list: { data: { type: "list", id: KLAVIYO_LIST_ID } },
+                },
+              },
+            }),
+          }
+        );
+        if (!res.ok) throw new Error(`Klaviyo responded ${res.status}`);
+        notifyStatus.textContent = "You're on the list. We'll remind you at release.";
+        notifyForm.hidden = true;
+      } catch (err) {
+        notifyStatus.textContent = "Something went wrong. Please try again.";
+      }
+    });
+
+  </script>
 
   <!-- Agentation: local-only visual feedback toolbar, never loads in production -->
   <script type="module">
