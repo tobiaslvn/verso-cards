@@ -269,6 +269,24 @@ body {
   display: block;
 }
 
+.gallery {
+  cursor: pointer;
+  user-select: none;
+}
+
+.gallery-item[hidden] {
+  display: none;
+}
+
+.figure .clip-video {
+  max-height: 48vh;
+}
+
+.gallery-count {
+  color: #999;
+  letter-spacing: 0.04em;
+}
+
 /* ---------- Load animation (first visit only) ---------- */
 
 @keyframes staggerIn {
@@ -352,7 +370,10 @@ body {
 
   .figure-mobile .clip-video {
     width: 100%;
-    margin-top: 16px;
+  }
+
+  .figure-mobile .gallery-count {
+    margin-top: 8px;
   }
 
   .product {

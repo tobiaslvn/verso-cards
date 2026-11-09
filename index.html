@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Verso Cards</title>
   <meta name="description" content="Verso Cards" />
-  <link rel="stylesheet" href="styles.css?v=41" />
+  <link rel="stylesheet" href="styles.css?v=42" />
   <link rel="icon" href="FAVI.svg?v=2" type="image/svg+xml" />
 </head>
 <body>
@@ -22,9 +22,10 @@
         of spades, painted in Copenhagen, Denmark, and released in time-limited editions.
       </p>
 
-      <figure class="figure-mobile">
-        <img class="product" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
-        <video class="clip-video" src="clip.mp4" autoplay muted loop playsinline preload="metadata"></video>
+      <figure class="figure-mobile gallery" aria-label="Gallery, click to see next">
+        <img class="product gallery-item" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
+        <video class="clip-video gallery-item" src="clip.mp4" muted loop playsinline preload="metadata" hidden></video>
+        <figcaption class="gallery-count"></figcaption>
       </figure>
 
       <dl class="block spec">
@@ -46,7 +47,7 @@
         <p>Available for a limited time</p>
         <p>Ends in <span id="countdown"></span></p>
         <p class="spaced">
-          <a class="buy-button" href="https://buy.stripe.com/00w3cu3WybXrfbCebf8Ra06">Buy $185</a>
+          <a class="buy-button" href="https://buy.stripe.com/aFaeVc78Ke5z9Ri6IN8Ra07">Buy $185</a>
         </p>
         <p class="buy-note">Ships in December 2026, complimentary delivery from California</p>
       </div>
@@ -140,9 +141,10 @@
 
     </section>
 
-    <figure class="figure">
-      <img class="product" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
-      <video class="clip-video" src="clip.mp4" autoplay muted loop playsinline></video>
+    <figure class="figure gallery" aria-label="Gallery, click to see next">
+      <img class="product gallery-item" src="01.jpg" alt="Hand-painted ace of spades beside a hand-painted flower card back" />
+      <video class="clip-video gallery-item" src="clip.mp4" muted loop playsinline preload="metadata" hidden></video>
+      <figcaption class="gallery-count"></figcaption>
     </figure>
   </main>
 
@@ -188,6 +190,23 @@
     }
     renderRelease();
     setInterval(renderRelease, 1000);
+
+    // --- Gallery: one item at a time, click to advance ---
+    document.querySelectorAll(".gallery").forEach((gallery) => {
+      const items = [...gallery.querySelectorAll(".gallery-item")];
+      const counter = gallery.querySelector(".gallery-count");
+      let current = 0;
+      function show(n) {
+        current = (n + items.length) % items.length;
+        items.forEach((item, i) => {
+          item.hidden = i !== current;
+          if (item.tagName === "VIDEO") item.hidden ? item.pause() : item.play();
+        });
+        counter.textContent = `${current + 1} / ${items.length}`;
+      }
+      gallery.addEventListener("click", () => show(current + 1));
+      show(0);
+    });
 
     const notifyForm = document.getElementById("notify-form");
     const notifyStatus = document.getElementById("notify-status");
